@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "2f5e364b-1ee4-4221-b46e-1270621df903",
-  "project_id": "defba2d3-85a9-4b4a-9eeb-68701f1f7a50",
-  "url": "/__l5e/assets-v1/2f5e364b-1ee4-4221-b46e-1270621df903/aethelis-mark.png",
-  "r2_key": "a/v1/defba2d3-85a9-4b4a-9eeb-68701f1f7a50/2f5e364b-1ee4-4221-b46e-1270621df903/aethelis-mark.png",
-  "original_filename": "aethelis-mark.png",
-  "size": 88448,
   "content_type": "image/png",
-  "created_at": "2026-09-19T13:43:07Z"
+  "created_at": "2026-09-19T13:43:07Z",
+  "original_filename": "aethelis-mark.png",
+  "project_id": "6619c25f-1c0f-49e9-bc6c-04a057f7ac75",
+  "r2_key": "a/v1/6619c25f-1c0f-49e9-bc6c-04a057f7ac75/2f5e364b-1ee4-4221-b46e-1270621df903/aethelis-mark.png",
+  "size": 88448,
+  "url": "/__l5e/assets-v1/2f5e364b-1ee4-4221-b46e-1270621df903/aethelis-mark.png",
+  "version": 1
 }
