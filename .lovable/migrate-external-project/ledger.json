@@ -1,0 +1,10 @@
+{
+  "capabilities": [
+    {"capability":"source code","source":"Money-in-Check GitHub repository","outcome":"adapt into the Financial Literacy page","status":"in_progress","next_action":"inspect and recreate the experience"},
+    {"capability":"schema","source":"repository inspection","outcome":"no database schema detected","status":"verified","next_action":"none"},
+    {"capability":"records","source":"repository inspection","outcome":"no record export detected","status":"verified","next_action":"none"},
+    {"capability":"authentication","source":"repository inspection","outcome":"no authentication detected","status":"pending","next_action":"confirm through call-site inspection"},
+    {"capability":"external providers","source":"repository inspection","outcome":"none detected","status":"pending","next_action":"confirm through call-site inspection"},
+    {"capability":"verification","source":"Lovable preview","outcome":"not yet verified","status":"pending","next_action":"test the adapted page"}
+  ]
+}
