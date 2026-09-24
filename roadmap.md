@@ -3,4 +3,6 @@
 - [x] Inspect Money-in-Check source and identify all production capabilities
 - [x] Clone its original visual experience into /financial-literacy
 - [x] Remove the book, author, sales, social, and newsletter material
-- [ ] Verify desktop/mobile behavior, interactions, metadata, and current build health
+- [x] Verify desktop/mobile behavior, interactions, metadata, and current build health
+- [x] Fix /financial-literacy module-script MIME errors and React #418 (path base + preload paths corrected)
+- [ ] Homepage shows a React #418 hydration warning in the dev preview only — page renders and works; same files load clean when served statically
