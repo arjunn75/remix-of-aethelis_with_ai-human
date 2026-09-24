@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SplatRouteImport } from './routes/$'
+import { Route as FinancialLiteracyRouteImport } from './routes/financial-literacy'
 import { Route as RegisterRouteImport } from './routes/register'
 
 const IndexRoute = IndexRouteImport.update({
@@ -23,6 +24,11 @@ const SplatRoute = SplatRouteImport.update({
   path: '/$',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FinancialLiteracyRoute = FinancialLiteracyRouteImport.update({
+  id: '/financial-literacy',
+  path: '/financial-literacy',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RegisterRoute = RegisterRouteImport.update({
   id: '/register',
   path: '/register',
@@ -32,30 +38,34 @@ const RegisterRoute = RegisterRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
+  '/financial-literacy': typeof FinancialLiteracyRoute
   '/register': typeof RegisterRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
+  '/financial-literacy': typeof FinancialLiteracyRoute
   '/register': typeof RegisterRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
+  '/financial-literacy': typeof FinancialLiteracyRoute
   '/register': typeof RegisterRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/$' | '/register'
+  fullPaths: '/' | '/$' | '/financial-literacy' | '/register'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/$' | '/register'
-  id: '__root__' | '/' | '/$' | '/register'
+  to: '/' | '/$' | '/financial-literacy' | '/register'
+  id: '__root__' | '/' | '/$' | '/financial-literacy' | '/register'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SplatRoute: typeof SplatRoute
+  FinancialLiteracyRoute: typeof FinancialLiteracyRoute
   RegisterRoute: typeof RegisterRoute
 }
 
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof SplatRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/financial-literacy': {
+      id: '/financial-literacy'
+      path: '/financial-literacy'
+      fullPath: '/financial-literacy'
+      preLoaderRoute: typeof FinancialLiteracyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/register': {
       id: '/register'
       path: '/register'
@@ -88,6 +105,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SplatRoute: SplatRoute,
+  FinancialLiteracyRoute: FinancialLiteracyRoute,
   RegisterRoute: RegisterRoute,
 }
 export const routeTree = rootRouteImport
