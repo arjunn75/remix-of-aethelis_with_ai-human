@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "8b7c0585-58a5-4b49-99c2-ef869f4e3768",
-  "project_id": "6619c25f-1c0f-49e9-bc6c-04a057f7ac75",
-  "url": "/__l5e/assets-v1/8b7c0585-58a5-4b49-99c2-ef869f4e3768/coin.webp",
-  "r2_key": "a/v1/6619c25f-1c0f-49e9-bc6c-04a057f7ac75/8b7c0585-58a5-4b49-99c2-ef869f4e3768/coin.webp",
-  "original_filename": "coin.webp",
-  "size": 20096,
   "content_type": "image/webp",
-  "created_at": "2026-09-24T07:20:06Z"
+  "created_at": "2026-09-24T07:20:06Z",
+  "original_filename": "coin.webp",
+  "project_id": "46d0020c-c100-445f-87e7-96c6a1d3b03e",
+  "r2_key": "a/v1/46d0020c-c100-445f-87e7-96c6a1d3b03e/8b7c0585-58a5-4b49-99c2-ef869f4e3768/coin.webp",
+  "size": 20096,
+  "url": "/__l5e/assets-v1/8b7c0585-58a5-4b49-99c2-ef869f4e3768/coin.webp",
+  "version": 1
 }

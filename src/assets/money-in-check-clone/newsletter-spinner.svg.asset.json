@@ -1,11 +1,11 @@
 {
-  "version": 1,
   "asset_id": "6685bb4d-263d-4602-ad4b-0c54f0097bcb",
-  "project_id": "6619c25f-1c0f-49e9-bc6c-04a057f7ac75",
-  "url": "/__l5e/assets-v1/6685bb4d-263d-4602-ad4b-0c54f0097bcb/newsletter-spinner.svg",
-  "r2_key": "a/v1/6619c25f-1c0f-49e9-bc6c-04a057f7ac75/6685bb4d-263d-4602-ad4b-0c54f0097bcb/newsletter-spinner.svg",
-  "original_filename": "newsletter-spinner.svg",
-  "size": 1603,
   "content_type": "image/svg+xml",
-  "created_at": "2026-09-24T07:20:11Z"
+  "created_at": "2026-09-24T07:20:11Z",
+  "original_filename": "newsletter-spinner.svg",
+  "project_id": "46d0020c-c100-445f-87e7-96c6a1d3b03e",
+  "r2_key": "a/v1/46d0020c-c100-445f-87e7-96c6a1d3b03e/6685bb4d-263d-4602-ad4b-0c54f0097bcb/newsletter-spinner.svg",
+  "size": 1603,
+  "url": "/__l5e/assets-v1/6685bb4d-263d-4602-ad4b-0c54f0097bcb/newsletter-spinner.svg",
+  "version": 1
 }
