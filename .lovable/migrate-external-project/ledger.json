@@ -1,10 +1,13 @@
 {
   "capabilities": [
-    {"capability":"source code","source":"Money-in-Check GitHub repository","outcome":"adapt into the Financial Literacy page","status":"in_progress","next_action":"inspect and recreate the experience"},
+    {"capability":"source code","source":"Money-in-Check GitHub repository","outcome":"cloned original static visual experience into /financial-literacy","status":"migrated","next_action":"verify preview"},
     {"capability":"schema","source":"repository inspection","outcome":"no database schema detected","status":"verified","next_action":"none"},
     {"capability":"records","source":"repository inspection","outcome":"no record export detected","status":"verified","next_action":"none"},
-    {"capability":"authentication","source":"repository inspection","outcome":"no authentication detected","status":"pending","next_action":"confirm through call-site inspection"},
-    {"capability":"external providers","source":"repository inspection","outcome":"none detected","status":"pending","next_action":"confirm through call-site inspection"},
-    {"capability":"verification","source":"Lovable preview","outcome":"not yet verified","status":"pending","next_action":"test the adapted page"}
+    {"capability":"authentication","source":"repository and call-site inspection","outcome":"no authentication detected","status":"verified","next_action":"none"},
+    {"capability":"authorization","source":"repository and call-site inspection","outcome":"no authorization system detected","status":"verified","next_action":"none"},
+    {"capability":"uploaded file bytes","source":"repository assets","outcome":"all supplied images and fonts migrated","status":"migrated","next_action":"verify asset requests"},
+    {"capability":"external providers","source":"repository and call-site inspection","outcome":"author sales/social links removed by request","status":"accepted","next_action":"none"},
+    {"capability":"public endpoints","source":"repository inspection","outcome":"book newsletter endpoint removed with book section","status":"accepted","next_action":"none"},
+    {"capability":"verification","source":"Lovable preview","outcome":"not yet verified","status":"pending","next_action":"test desktop and mobile"}
   ]
 }
