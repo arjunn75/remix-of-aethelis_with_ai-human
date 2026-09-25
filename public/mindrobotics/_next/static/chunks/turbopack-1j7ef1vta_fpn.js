@@ -4,7 +4,7 @@
 }]), (() => {
     let e;
     if (!Array.isArray(globalThis.TURBOPACK)) return;
-    let t = "/_next/",
+    let t = "/mindrobotics/_next/",
         r = function() {
             var e, t, r, n;
             if (null != self.TURBOPACK_ASSET_SUFFIX) return self.TURBOPACK_ASSET_SUFFIX;
