@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as SplatRouteImport } from './routes/$'
+import { Route as AiAndHumanRouteImport } from './routes/ai-and-human'
 import { Route as FinancialLiteracyRouteImport } from './routes/financial-literacy'
 import { Route as RegisterRouteImport } from './routes/register'
 
@@ -22,6 +23,11 @@ const IndexRoute = IndexRouteImport.update({
 const SplatRoute = SplatRouteImport.update({
   id: '/$',
   path: '/$',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const AiAndHumanRoute = AiAndHumanRouteImport.update({
+  id: '/ai-and-human',
+  path: '/ai-and-human',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FinancialLiteracyRoute = FinancialLiteracyRouteImport.update({
@@ -38,12 +44,14 @@ const RegisterRoute = RegisterRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
+  '/ai-and-human': typeof AiAndHumanRoute
   '/financial-literacy': typeof FinancialLiteracyRoute
   '/register': typeof RegisterRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
+  '/ai-and-human': typeof AiAndHumanRoute
   '/financial-literacy': typeof FinancialLiteracyRoute
   '/register': typeof RegisterRoute
 }
@@ -51,20 +59,28 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/$': typeof SplatRoute
+  '/ai-and-human': typeof AiAndHumanRoute
   '/financial-literacy': typeof FinancialLiteracyRoute
   '/register': typeof RegisterRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/$' | '/financial-literacy' | '/register'
+  fullPaths: '/' | '/$' | '/ai-and-human' | '/financial-literacy' | '/register'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/$' | '/financial-literacy' | '/register'
-  id: '__root__' | '/' | '/$' | '/financial-literacy' | '/register'
+  to: '/' | '/$' | '/ai-and-human' | '/financial-literacy' | '/register'
+  id:
+    | '__root__'
+    | '/'
+    | '/$'
+    | '/ai-and-human'
+    | '/financial-literacy'
+    | '/register'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   SplatRoute: typeof SplatRoute
+  AiAndHumanRoute: typeof AiAndHumanRoute
   FinancialLiteracyRoute: typeof FinancialLiteracyRoute
   RegisterRoute: typeof RegisterRoute
 }
@@ -83,6 +99,13 @@ declare module '@tanstack/react-router' {
       path: '/$'
       fullPath: '/$'
       preLoaderRoute: typeof SplatRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/ai-and-human': {
+      id: '/ai-and-human'
+      path: '/ai-and-human'
+      fullPath: '/ai-and-human'
+      preLoaderRoute: typeof AiAndHumanRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/financial-literacy': {
@@ -105,6 +128,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   SplatRoute: SplatRoute,
+  AiAndHumanRoute: AiAndHumanRoute,
   FinancialLiteracyRoute: FinancialLiteracyRoute,
   RegisterRoute: RegisterRoute,
 }
