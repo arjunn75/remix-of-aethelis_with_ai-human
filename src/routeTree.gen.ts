@@ -14,6 +14,7 @@ import { Route as SplatRouteImport } from './routes/$'
 import { Route as AiAndHumanRouteImport } from './routes/ai-and-human'
 import { Route as FinancialLiteracyRouteImport } from './routes/financial-literacy'
 import { Route as RegisterRouteImport } from './routes/register'
+import { Route as ApiPublicImgRouteImport } from './routes/api/public/img'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -40,6 +41,11 @@ const RegisterRoute = RegisterRouteImport.update({
   path: '/register',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ApiPublicImgRoute = ApiPublicImgRouteImport.update({
+  id: '/api/public/img',
+  path: '/api/public/img',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +53,7 @@ export interface FileRoutesByFullPath {
   '/ai-and-human': typeof AiAndHumanRoute
   '/financial-literacy': typeof FinancialLiteracyRoute
   '/register': typeof RegisterRoute
+  '/api/public/img': typeof ApiPublicImgRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +61,7 @@ export interface FileRoutesByTo {
   '/ai-and-human': typeof AiAndHumanRoute
   '/financial-literacy': typeof FinancialLiteracyRoute
   '/register': typeof RegisterRoute
+  '/api/public/img': typeof ApiPublicImgRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,12 +70,25 @@ export interface FileRoutesById {
   '/ai-and-human': typeof AiAndHumanRoute
   '/financial-literacy': typeof FinancialLiteracyRoute
   '/register': typeof RegisterRoute
+  '/api/public/img': typeof ApiPublicImgRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/$' | '/ai-and-human' | '/financial-literacy' | '/register'
+  fullPaths:
+    | '/'
+    | '/$'
+    | '/ai-and-human'
+    | '/financial-literacy'
+    | '/register'
+    | '/api/public/img'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/$' | '/ai-and-human' | '/financial-literacy' | '/register'
+  to:
+    | '/'
+    | '/$'
+    | '/ai-and-human'
+    | '/financial-literacy'
+    | '/register'
+    | '/api/public/img'
   id:
     | '__root__'
     | '/'
@@ -75,6 +96,7 @@ export interface FileRouteTypes {
     | '/ai-and-human'
     | '/financial-literacy'
     | '/register'
+    | '/api/public/img'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -83,6 +105,7 @@ export interface RootRouteChildren {
   AiAndHumanRoute: typeof AiAndHumanRoute
   FinancialLiteracyRoute: typeof FinancialLiteracyRoute
   RegisterRoute: typeof RegisterRoute
+  ApiPublicImgRoute: typeof ApiPublicImgRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -122,6 +145,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RegisterRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/api/public/img': {
+      id: '/api/public/img'
+      path: '/api/public/img'
+      fullPath: '/api/public/img'
+      preLoaderRoute: typeof ApiPublicImgRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -131,6 +161,7 @@ const rootRouteChildren: RootRouteChildren = {
   AiAndHumanRoute: AiAndHumanRoute,
   FinancialLiteracyRoute: FinancialLiteracyRoute,
   RegisterRoute: RegisterRoute,
+  ApiPublicImgRoute: ApiPublicImgRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
