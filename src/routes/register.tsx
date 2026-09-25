@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 
-import markAsset from "../assets/aethelis-mark.png.asset.json";
 
 export const Route = createFileRoute("/register")({
   head: () => ({
@@ -42,7 +41,7 @@ function RegisterPage() {
     <main className="min-h-screen bg-black text-white">
       <div className="mx-auto w-full max-w-5xl px-6 py-16 md:py-24">
         <a href="/" className="flex items-center gap-3">
-          <img src={markAsset.url} alt="Aethelis" className="h-9 w-9 object-contain" />
+          <img src="/media/aethelis-mark.png" alt="Aethelis" className="h-9 w-9 object-contain" />
           <span className="font-mono text-[11px] uppercase tracking-[0.34em] text-white/70">
             Aethelis
           </span>
