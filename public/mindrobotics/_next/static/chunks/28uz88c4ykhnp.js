@@ -696,7 +696,7 @@
         l = {
             deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
             imageSizes: [32, 48, 64, 96, 128, 256, 384],
-            path: "/_next/image",
+            path: "/api/public/img",
             loader: "default",
             loaderFile: "",
             domains: [],
@@ -1238,7 +1238,7 @@
             deviceSizes: [768, 1280, 1600],
             imageSizes: [384],
             qualities: [90],
-            path: "/_next/image",
+            path: "/api/public/img",
             loader: "default",
             dangerouslyAllowSVG: !1,
             unoptimized: !1
@@ -1435,7 +1435,7 @@
                 deviceSizes: [768, 1280, 1600],
                 imageSizes: [384],
                 qualities: [90],
-                path: "/_next/image",
+                path: "/api/public/img",
                 loader: "default",
                 dangerouslyAllowSVG: !1,
                 unoptimized: !1
