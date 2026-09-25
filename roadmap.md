@@ -8,4 +8,4 @@
 - [ ] Homepage shows a React #418 hydration warning in the dev preview only — page renders and works; same files load clean when served statically
 - [x] Recommend the best next step after the Financial Literacy page improvements are complete
 - [x] Complete Financial Literacy media, loading flow, readable desktop text, registration link, and footer spacing
-- [ ] Add the uploaded Mind Robotics experience unchanged as the AI and Human pillar page
+- [x] Add the uploaded Mind Robotics experience unchanged as the AI and Human pillar page
